@@ -1,0 +1,75 @@
+.scroller-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  min-height: 50vh;
+  background: rgba(255, 255, 255, 0.1);
+  align-items: center;
+}
+.scroller-wrapper .scroller {
+  width: 100%;
+  max-width: 1280px;
+  flex: 1;
+  padding: 0 !important;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  scrollbar-width: none !important;
+}
+.scroller-wrapper .scroller::-webkit-scrollbar {
+  display: none;
+}
+.scroller-wrapper .slide {
+  min-width: 100%;
+  flex: 1;
+  position: relative;
+  scroll-snap-align: center;
+  background-size: cover;
+  background-position: center;
+}
+.scroller-wrapper .slide .caption {
+  margin: 1rem;
+  display: inline-block;
+  color: white;
+  mix-blend-mode: exclusion;
+  text-shadow: 0 0 3px black;
+}
+.scroller-wrapper .dots-container {
+  width: 100%;
+  padding: 0.5rem 0;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+  justify-content: center;
+  background: black;
+}
+.scroller-wrapper .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: white;
+  opacity: 0.25;
+  border-radius: 50%;
+}
+.scroller-wrapper .selected {
+  opacity: 0.75;
+}
+
+@media (prefers-color-scheme: light) {
+  .dot {
+    background: black !important;
+  }
+
+  .scroller-wrapper {
+    background: rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .dots-container {
+    background: white !important;
+  }
+}
+
+/*# sourceMappingURL=scroller.css.map */

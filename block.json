@@ -1,0 +1,14 @@
+{
+	"name": "create-block/scroller",
+	"title": "Scroller",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "A simple gallery scoller for Electric Air Studios' website.",
+	"textdomain": "scroller",
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
