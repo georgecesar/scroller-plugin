@@ -3,7 +3,7 @@
 /**
  * Plugin Name:     Scroller
  * Description:     A simple gallery scoller for Electric Air Studios' website.
- * Version:         1.0.0
+ * Version:         1.1
  * Author:          Giorgio Cesaroni
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
