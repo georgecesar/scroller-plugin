@@ -26,6 +26,16 @@ export default function save({ attributes }) {
 					))}
 			</div>
 			<div class="dots-container"></div>
+			<div class="scroller-fullscreen">
+				<div class="cover"></div>
+				<i class="fas fa-times" id="close"></i>
+				{attributes.media &&
+					attributes.media.map((e) => (
+						<div class="slide" style={"background-image: url(" + e.url + ")"}>
+							<h1 class="caption">{e.caption}</h1>
+						</div>
+					))}
+			</div>
 		</div>
 	);
 }

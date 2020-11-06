@@ -330,7 +330,21 @@ function save(_ref) {
     }, e.caption));
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     class: "dots-container"
-  }));
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    class: "scroller-fullscreen"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    class: "cover"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", {
+    class: "fas fa-times",
+    id: "close"
+  }), attributes.media && attributes.media.map(function (e) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "slide",
+      style: "background-image: url(" + e.url + ")"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h1", {
+      class: "caption"
+    }, e.caption));
+  })));
 }
 
 /***/ }),

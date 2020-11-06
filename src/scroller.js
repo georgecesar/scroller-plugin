@@ -1,9 +1,13 @@
 window.addEventListener("DOMContentLoaded", (e) => {
 	const scrollerWrapper = document.querySelectorAll(".scroller-wrapper");
+	// Dependency!
+	const header = document.querySelector(".header-wrapper");
 	if (!scrollerWrapper) return;
 
 	scrollerWrapper.forEach((e) => {
+		const scrollerWrapper = e;
 		const scroller = e.querySelector(".scroller");
+		const scrollerFullscreen = e.querySelector(".scroller-fullscreen");
 		const slides = scroller.querySelectorAll(".slide");
 		const dotsContainer = e.querySelector(".dots-container");
 		let isScrolling;
@@ -21,15 +25,17 @@ window.addEventListener("DOMContentLoaded", (e) => {
 			});
 		}
 
-		function updateDots() {
-			const dots = document.querySelectorAll(".dot");
-			dots.forEach((dot, i) => {
-				dot.classList.remove("selected");
-			});
-
-			slides.forEach((slide, i) => {
-				if (slide.classList.contains("visible")) {
-					dotsContainer.children[i].classList.add("selected");
+		// Switch to fullscreen
+		if (scrollerFullscreen) {
+			scrollerWrapper.addEventListener("click", () => {
+				if (scrollerFullscreen.style.display == "none") {
+					scrollerFullscreen.style.display = "flex";
+					// Dependency!
+					header.style.display = "none";
+				} else {
+					scrollerFullscreen.style.display = "none";
+					// Dependency!
+					header.style.display = "block";
 				}
 			});
 		}
