@@ -53,6 +53,7 @@
   background: white;
   opacity: 0.25;
   border-radius: 50%;
+  transition: opacity 0.1s ease-in-out;
 }
 .scroller-wrapper .selected {
   opacity: 0.75;
